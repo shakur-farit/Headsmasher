@@ -32,9 +32,8 @@ namespace Assets.Code.Infrastructure.States.GameStates
 
 			PlayBackgroundMusic();
 			CreateHead();
-			GameObject smasher = CreateSmasher();
-			SetCameraFollowing(smasher);
-		}
+			CreateSmasher();
+    }
 
 		public void Exit()
 		{
@@ -46,16 +45,13 @@ namespace Assets.Code.Infrastructure.States.GameStates
 			audioSource.Play();
 		}
 
-		private GameObject CreateHead() => 
+		private void CreateHead() => 
 			_headFactory.CreateHead();
 
-		private GameObject CreateSmasher() => 
+		private void CreateSmasher() => 
 			_smasherFactory.CreateSmasher();
 
-		private void SetCameraFollowing(GameObject head) => 
-			_cameraProvider.SetFollowTarget(head.transform);
-
-		private void OpenHudWindow() => 
+    private void OpenHudWindow() => 
       _windowService.Open(WindowId.Hud);
 	}
 }

@@ -21,8 +21,8 @@ namespace Assets.Code.Gameplay.Camera.Behaviours
 				return;
 
 			transform.position = new(
-				transform.position.x, 
-				transform.position.y,
+        _cameraProvider.FollowTarget.position.x,
+        _cameraProvider.FollowTarget.position.y,
 				_cameraProvider.FollowTarget.position.z);
 		}
 	}
