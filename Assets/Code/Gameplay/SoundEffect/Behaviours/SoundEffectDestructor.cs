@@ -5,14 +5,14 @@ namespace Assets.Code.Gameplay.SoundEffect.Behaviours
 {
   public class SoundEffectDestructor : MonoBehaviour
   {
-    private const int DestructDelay = 2000;
+	  [SerializeField] private SoundEffect _soundEffect;
 
     private void Start() => 
       Destruct();
 
     private async void Destruct()
     {
-      await UniTask.Delay(DestructDelay);
+      await UniTask.Delay(_soundEffect.GetLifetime());
 
       Destroy(gameObject);
     }

@@ -23,18 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ee95903bfa92eb40bda322562a9107e
-    m_Address: Assets/StaticData/SoundEffect/WinSoundEffectConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SoundEffectConfig
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 229a783e6209afa43845bd51d8714a15
-    m_Address: Assets/StaticData/SoundEffect/PickupSoundEffectConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SoundEffectConfig
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a1faebd4de5517478ff55dd66bc6cd5
     m_Address: HeadConfig
     m_ReadOnly: 0
@@ -45,12 +33,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - WindowConfig
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5e5af6a6d69fc7d4e9e122d52b6e7b0f
-    m_Address: Assets/StaticData/SoundEffect/LoseSoundEffectConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SoundEffectConfig
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 843fa59d4fbaaed458435e387c275462
     m_Address: Assets/StaticData/SoundEffect/JumpSoundEffectConfig.asset

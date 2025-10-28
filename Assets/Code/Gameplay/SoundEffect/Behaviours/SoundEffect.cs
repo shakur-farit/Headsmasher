@@ -6,11 +6,17 @@ namespace Assets.Code.Gameplay.SoundEffect.Behaviours
   {
     [SerializeField] private AudioSource _audioSource;
 
-    public void Setup(AudioClip audioClip)
+    private int _lifetime;
+
+    public void Setup(AudioClip audioClip, int lifetime)
     {
       _audioSource.clip = audioClip;
 
       _audioSource.Play();
+      _lifetime = lifetime;
     }
+
+    public int GetLifetime() =>
+    _lifetime;
   }
 }

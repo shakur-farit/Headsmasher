@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Assets.Code.Gameplay.Input
 {
@@ -7,5 +8,9 @@ namespace Assets.Code.Gameplay.Input
 	{
 		public GameObject Prefab;
 		public Vector3 StartPosition;
+		public int CurrentHp;
+		public int MaxHp;
+		public int PunchScore;
+		public int TakenDamage;
 	}
 }

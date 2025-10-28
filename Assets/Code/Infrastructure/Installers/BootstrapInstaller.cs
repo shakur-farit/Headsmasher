@@ -58,6 +58,7 @@ namespace Assets.Code.Infrastructure.Installers
 			Container.Bind<ICameraProvider>().To<CameraProvider>().AsSingle();
 			Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
 			Container.Bind<IScoreService>().To<ScoreService>().AsSingle();
+			Container.Bind<IHeadHealthService>().To<HeadHealthService>().AsSingle();
     }
 
 		public void BindGameplayFactories()

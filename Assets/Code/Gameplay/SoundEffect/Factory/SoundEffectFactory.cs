@@ -16,15 +16,15 @@ namespace Assets.Code.Gameplay.SoundEffect.Factory
       _instantiator = instantiator;
     }
 
-    public Behaviours.SoundEffect CreateSoundEffect(SoundEffectTypeId typeId, Vector3 at)
+    public Behaviours.SoundEffect CreateSoundEffect(SoundEffectTypeId typeId)
     {
       SoundEffectConfig config = _staticDataService.GetSoundEffectConfig(typeId);
 
       Behaviours.SoundEffect soundEffect =
-        _instantiator.InstantiatePrefabForComponent<Behaviours.SoundEffect>(config.Prefab, at, Quaternion.identity, null);
+        _instantiator.InstantiatePrefabForComponent<Behaviours.SoundEffect>(config.Prefab);
 
       soundEffect
-        .Setup(config.AudioClip);
+        .Setup(config.AudioClip, config.Lifetime);
 
       return soundEffect;
     }

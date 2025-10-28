@@ -8,5 +8,6 @@ namespace Assets.Code.Gameplay.SoundEffect.Config
     public SoundEffectTypeId TypeId;
     public GameObject Prefab;
     public AudioClip AudioClip;
+    [Range(1, 5000)] public int Lifetime;
   }
 }

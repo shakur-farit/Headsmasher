@@ -16,12 +16,16 @@ namespace Assets.Code.Gameplay.Input
 			_staticDataService = staticDataService;
 		}
 
-		public GameObject CreateHead()
+		public HeadItem CreateHead()
 		{
 			HeadConfig config = _staticDataService.GetHeadConfig();
 
-			return _instantiator.InstantiatePrefab(
+			HeadItem head = _instantiator.InstantiatePrefabForComponent<HeadItem>(
 				config.Prefab, config.StartPosition, Quaternion.identity, null);
+
+			head.Setup(config.CurrentHp, config.MaxHp, config.PunchScore, config.TakenDamage);
+
+			return head;
 		}
 	}
 }
