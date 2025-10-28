@@ -21,7 +21,6 @@ namespace Assets.Code.Gameplay.Input
     {
       if (IsPunching())
         return;
-
       _animator.SetInteger(_punch, LeftPunch);
     }
 
