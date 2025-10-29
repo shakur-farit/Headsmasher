@@ -10,7 +10,7 @@
 ---
 
 ## 📸 Gameplay
-https://github.com/user-attachments/assets/19ae8a43-4613-4bfc-9f63-ee391f5b787f
+[Headsmasher](https://github.com/user-attachments/assets/19ae8a43-4613-4bfc-9f63-ee391f5b787f)
 ---
 
 
