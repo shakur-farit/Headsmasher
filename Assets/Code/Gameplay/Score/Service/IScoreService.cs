@@ -7,5 +7,6 @@ namespace Assets.Code.Gameplay.Input
 		event Action ScoreChanged;
 		int GetScore();
 		void IncreaseScore(int score);
-	}
+    void Reset();
+  }
 }

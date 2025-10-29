@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df807ac5d99fb27499dfe92f897b0298, type: 3}
-  m_Name: JumpSoundEffectConfig
+  m_Name: PunchSoundEffectConfig
   m_EditorClassIdentifier: 
   TypeId: 1
-  Prefab: {fileID: 6216510316992672866, guid: aa7266f878b36fa4da5657013ec6ad7f, type: 3}
-  AudioClip: {fileID: 8300000, guid: f2e1717e9187d074890fa9e55dece8f4, type: 3}
-  Lifetime: 0
+  Prefab: {fileID: 8322226511344584319, guid: f4ce023588f8b9d42a435408635426c6, type: 3}
+  AudioClip: {fileID: 8300000, guid: b5993812b99e2ec4a868ecd8b0e34441, type: 3}
+  Lifetime: 2000

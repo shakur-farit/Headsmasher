@@ -1,6 +1,5 @@
 using Assets.Code.Gameplay.SoundEffect.Config;
 using Assets.Code.Infrastructure.StaticData;
-using UnityEngine;
 using Zenject;
 
 namespace Assets.Code.Gameplay.SoundEffect.Factory

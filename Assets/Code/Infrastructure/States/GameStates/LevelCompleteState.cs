@@ -1,30 +1,26 @@
-using Assets.Code.Gameplay.Camera.Service;
+using Assets.Code.Gameplay.Input;
 using Assets.Code.Infrastructure.States.Infrastructure;
 using Assets.Code.Meta.UI.Windows;
 using Assets.Code.Meta.UI.Windows.Service;
-using UnityEngine;
 
 namespace Assets.Code.Infrastructure.States.GameStates
 {
 	public class LevelCompleteState : IState
 	{
     private readonly IWindowService _windowService;
-    private readonly ICameraProvider _cameraProvider;
+    private readonly IScoreService _score;
 
-    public LevelCompleteState(IWindowService windowService, ICameraProvider cameraProvider)
+    public LevelCompleteState(IWindowService windowService, IScoreService score)
     {
       _windowService = windowService;
-      _cameraProvider = cameraProvider;
-      _cameraProvider = cameraProvider;
+      _score = score;
     }
 
     public void Enter()
     {
+      _score.Reset();
 	    _windowService.Close(WindowId.Hud);
 			_windowService.Open(WindowId.LevelCompleteWindow);
-
-      AudioSource audioSource = _cameraProvider.MainCamera.GetComponent<AudioSource>();
-      audioSource.Stop();
     }
 
     public void Exit()

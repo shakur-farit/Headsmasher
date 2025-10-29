@@ -13,7 +13,6 @@ namespace Assets.Code.Gameplay.SoundEffect.Behaviours
     private async void Destruct()
     {
       await UniTask.Delay(_soundEffect.GetLifetime());
-
       Destroy(gameObject);
     }
   }

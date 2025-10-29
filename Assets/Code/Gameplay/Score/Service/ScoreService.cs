@@ -17,5 +17,8 @@ namespace Assets.Code.Gameplay.Input
 
 			ScoreChanged?.Invoke();
 		}
-	}
+
+    public void Reset() => 
+      _score = 0;
+  }
 }
