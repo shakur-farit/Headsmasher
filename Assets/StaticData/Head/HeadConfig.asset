@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: HeadConfig
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4354254314480749955, guid: f09e4f640eb505046968723bb75d1401, type: 3}
-  StartPosition: {x: 0, y: 0, z: 0}
+  StartPosition: {x: 0.04, y: 1.28, z: -1.125}
+  CurrentHp: 1
+  MaxHp: 10
+  PunchScore: 10
+  TakenDamage: 1

@@ -19,7 +19,7 @@ namespace Assets.Code.Gameplay.Input
 		public void Constructor(IHeadHealthService health) => 
 			_health = health;
 
-		public void Setup(int currentHp, int maxHp, int score, int takenDamage)
+		public void Setup(float currentHp, float maxHp, int score, int takenDamage)
 		{
 			_health.SetHp(currentHp, maxHp);
 			_punchScore = score;

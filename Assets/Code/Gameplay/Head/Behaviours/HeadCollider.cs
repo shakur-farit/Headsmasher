@@ -17,24 +17,29 @@ namespace Assets.Code.Gameplay.Input
 		private IHeadHealthService _health;
 
 
-		[Inject]
-		public void Constructor(IHeadHealthService health, IScoreService score, ISoundEffectFactory soundEffect)
+    [Inject]
+		public void Constructor(
+      IHeadHealthService health, 
+      IScoreService score, 
+      ISoundEffectFactory soundEffect)
 		{
 			_score = score;
 			_soundEffect = soundEffect;
 			_health = health;
-		}
+      
+    }
 
-		private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter(Collider other)
 		{
-			if(other.gameObject.layer == RightHandLayer)
+      if (other.gameObject.layer == RightHandLayer)
 				Debug.Log("Right");
 			if (other.gameObject.layer == LeftHandLayer)
 				Debug.Log("Left");
 
-			_soundEffect.CreateSoundEffect(SoundEffectTypeId.Hit);
+			//_soundEffect.CreateSoundEffect(SoundEffectTypeId.Hit);
 			_score.IncreaseScore(_head.PunchScore);
 			_health.DecreaseCurrentHp(_head.TakenDamage);
-		}
+    }
 	}
 }

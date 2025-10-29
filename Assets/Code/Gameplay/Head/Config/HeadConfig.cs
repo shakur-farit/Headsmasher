@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Assets.Code.Gameplay.Input
 {
@@ -8,9 +7,15 @@ namespace Assets.Code.Gameplay.Input
 	{
 		public GameObject Prefab;
 		public Vector3 StartPosition;
-		public int CurrentHp;
-		public int MaxHp;
-		public int PunchScore;
-		public int TakenDamage;
-	}
+		[Range(1f, 100f)] public float CurrentHp;
+    [Range(1f, 100f)] public float MaxHp;
+    [Range(1f, 100f)] public int PunchScore;
+		[Range(1f, 100f)] public int TakenDamage;
+
+    private void OnValidate()
+    {
+      if(CurrentHp > MaxHp)
+        MaxHp = CurrentHp;
+    }
+  }
 }

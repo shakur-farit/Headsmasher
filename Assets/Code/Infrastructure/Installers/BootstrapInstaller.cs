@@ -59,6 +59,7 @@ namespace Assets.Code.Infrastructure.Installers
 			Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
 			Container.Bind<IScoreService>().To<ScoreService>().AsSingle();
 			Container.Bind<IHeadHealthService>().To<HeadHealthService>().AsSingle();
+			Container.Bind<IHeadDeathService>().To<HeadDeathService>().AsSingle();
     }
 
 		public void BindGameplayFactories()

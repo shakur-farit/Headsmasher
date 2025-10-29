@@ -5,9 +5,9 @@ namespace Assets.Code.Gameplay.Input
 	public interface IHeadHealthService
 	{
 		event Action HealthChanged;
-		int CurrentHp { get; }
-		int MaxHp { get; }
-		void SetHp(int currentHp, int maxHp);
-		void DecreaseCurrentHp(int value);
+		float CurrentHp { get; }
+		float MaxHp { get; }
+		void SetHp(float currentHp, float maxHp);
+		void DecreaseCurrentHp(float value);
 	}
 }

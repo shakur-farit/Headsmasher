@@ -23,7 +23,10 @@ namespace Assets.Code.Meta.UI.Windows.Behaviours
 			_headHealth = headHealth;
 		}
 
-		protected override void SubscribeUpdates()
+    protected override void Initialize() => 
+      UpdateHpText();
+
+    protected override void SubscribeUpdates()
 		{
 			_score.ScoreChanged += UpdateScoreText;
 			_headHealth.HealthChanged += UpdateHpText;
@@ -37,9 +40,8 @@ namespace Assets.Code.Meta.UI.Windows.Behaviours
 
 		private void UpdateHpText()
 		{
-			int hp = _headHealth.CurrentHp / _headHealth.MaxHp * 100;
-
-			_hpText.text = $"Health: {hp}%";
+			float hp = _headHealth.CurrentHp / _headHealth.MaxHp * 100;
+			_hpText.text = $"Health: {(int)hp}%";
 		}
 
 		private void UpdateScoreText() => 

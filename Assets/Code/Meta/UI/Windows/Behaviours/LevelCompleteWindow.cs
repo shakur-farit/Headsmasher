@@ -13,7 +13,6 @@ namespace Assets.Code.Meta.UI.Windows.Behaviours
   {
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _quitButton;
-    [SerializeField] private TextMeshProUGUI _coinText;
 
 		private IGameStateMachine _stateMachine;
     private IWindowService _windowService;

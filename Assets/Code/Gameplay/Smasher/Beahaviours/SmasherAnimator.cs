@@ -1,7 +1,5 @@
-using System;
-using TMPro;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Assets.Code.Gameplay.Input
 {
@@ -17,29 +15,48 @@ namespace Assets.Code.Gameplay.Input
     private readonly int _isIdling = Animator.StringToHash("isIdling");
     private readonly int _punch = Animator.StringToHash("Punch");
 
+    private bool _isPunching;
+
     public void AnimateLeftHit()
     {
-      if (IsPunching())
+      if (_isPunching)
         return;
-      _animator.SetInteger(_punch, LeftPunch);
+
+      StartCoroutine(PlayPunchRoutine(LeftPunch, LeftHandPunching));
     }
 
     public void AnimateRightHit()
     {
-      if (IsPunching())
+      if (_isPunching)
         return;
 
-      _animator.SetInteger(_punch, RightPunch);
+      StartCoroutine(PlayPunchRoutine(RightPunch, RightHandPunching));
     }
 
-    private bool IsPunching()
+    private IEnumerator PlayPunchRoutine(int punchType, string stateName)
+    {
+      _isPunching = true;
+
+      _animator.SetBool(_isIdling, false);
+      _animator.SetInteger(_punch, punchType);
+
+      yield return WaitForAnimationToEnd(stateName);
+
+      _animator.SetBool(_isIdling, true);
+      _animator.SetInteger(_punch, -1);
+
+      _isPunching = false;
+    }
+
+    private IEnumerator WaitForAnimationToEnd(string stateName)
     {
       AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
 
-      if (state.IsName(LeftHandPunching) || state.IsName(RightHandPunching))
-        return true;
-
-      return false;
+      while (!state.IsName(stateName))
+      {
+        yield return null;
+        state = _animator.GetCurrentAnimatorStateInfo(0);
+      }
     }
   }
 }
