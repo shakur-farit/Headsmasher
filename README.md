@@ -2,8 +2,20 @@
 
 ## 🎮 Description
 **Headsmasher** is a headpunching simulation 
----
 
+---
+## 🎮 Short Overview:
+
+Headsmasher is a simple 3D head-punching simulation featuring visual, sound, and physical feedback (knockback).
+The main focus is on immersion and the “juicy” feel of the hits — short reaction animations, punch sound effects.
+
+Technical Implementation:
+Unity 2022.3 LTS (use version 2022.3.xx).
+Animations: Mixamo hit reaction animations, imported and tuned for the Animator.
+Damage System: On collision, HP decreases; when it reaches 0, a death logic is triggered and the object is deactivated.
+Audio: Short punch SFX are played on each hit for impact feedback.
+
+---
 ## 🎯 Controls  
 - 🖱️ Left Click — Left punch   
 - 🖱️ Right Click — Right punch  
